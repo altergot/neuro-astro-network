@@ -25,6 +25,6 @@ handle = implay(arrays.video,10);
 cmap = jet(256);
 handle.Visual.ColorMap.Map = cmap;
 handle.Visual.ColorMap.UserRangeMin = -0.8;
-handle.Visual.ColorMap.UserRangeMax = 0.2;
+handle.Visual.ColorMap.UserRangeMax = 0.3;
 
 [accuracy, Acc] = count_accuracy(arrays.V_line, 3);
