@@ -1,5 +1,5 @@
 function [model] = simulate_model(model, params)
-    for i = 1 : params.n
+    for i = 1 : params.n - 1
         if rem(i, 1000) == 0
             disp([i, params.n]);
         end
