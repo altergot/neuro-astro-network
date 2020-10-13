@@ -51,6 +51,7 @@ There are multiple results of the simulation:
 1. The movie of learning and testing processes
 
     ![response](/results/video_response_17026.png "Video frame 17026. Testing")
+    Input signal, neuron spikes, astrocyte calcium concentration.
 
 2. Neuron spike frequencies for recognized patterns
 
@@ -88,7 +89,7 @@ There are multiple results of the simulation:
                 <img src="/results/thr_response_3.png" alt="Neuron frequencies binarized"/>
             </td>
         </tr>
-        <tr>
+        <tr style="text-align: center;">
             <td>0.9157</td>
             <td>0.9407</td>
             <td>0.9092</td>
@@ -98,9 +99,9 @@ There are multiple results of the simulation:
 
 4. The similarity metric for each image and average similarity
 
-    Similarity metrics for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774.
+    Similarity metrics for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774
     
-    Average = 0.9108
+    Average similarity = 0.9108
 
 ### Parameters
 
@@ -125,6 +126,12 @@ File model_parameters.m consist of multiple blocks of parameters described in th
 * **Susan Gordleeva** - *Biological model constructing*
 * **Alexander Gorban** - *Project vision*
 * **Alexey Zaikin** - *Project vision*
+
+## Cite
+
+Formation of working memory in a spiking neuron network accompanied by astrocytes
+Susanna Yu. Gordleeva, Yulia A. Tsybina, Mikhail I. Krivonosov, Mikhail V. Ivanchenko,
+Alexey A. Zaikin, Victor B. Kazantsev, Alexander N. Gorban
 
 ## License
 
