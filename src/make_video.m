@@ -1,5 +1,5 @@
 function [video] = make_video (Ca, V_line, Iapp, t_record_met)
-params = system_parameters();
+params = model_parameters();
 V = reshape(V_line, params.mneuro, params.nneuro, []);
 Iapp = Iapp ./ 10;
 V = V ./ 100;
