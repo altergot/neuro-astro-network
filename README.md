@@ -23,6 +23,7 @@ git clone https://github.com/altergot/neuro-astro-network.git
 ### Run
 
 To simulate experiment open and run main.m
+
 Default experiment consist of 4 images at the learning stage (digits 0, 1, 2, 3):
 
 ![zero](/images/zero.jpg "Zero")
@@ -30,7 +31,7 @@ Default experiment consist of 4 images at the learning stage (digits 0, 1, 2, 3)
 ![two](/images/two.jpg "Two")
 ![three](/images/three.jpg "Three")
 
-At the testing stage there are 8 alternated images (learned and new): digits 0, 5, 1, 6, 2, 7, 3, 8.
+And at the testing stage there are 8 alternated images are presented (learned and new): digits 0, 5, 1, 6, 2, 7, 3, 8.
 
 ![zero](/images/zero.jpg "Zero")
 ![five](/images/five.jpg "Five")
@@ -42,11 +43,36 @@ At the testing stage there are 8 alternated images (learned and new): digits 0, 
 ![eight](/images/five.jpg "Eight")
 
 Simulation model time is 7 seconds and step is 0.0001 seconds.
-Run time of model 
+Run time of the simulation for default parameters is around 3 hours.
+
+There are multiple results of the simulation:
+
+
+1. The movie of learning and testing processes
+
+![response](/results/video_response_17026.png "Video frame 17026. Testing")
+
+2. Neuron spike frequencies for recognized images
+
+![freq0](/results/freq_response_0.png "Neuron frequencies")
+![freq1](/results/freq_response_1.png "Neuron frequencies")
+![freq2](/results/freq_response_2.png "Neuron frequencies")
+![freq3](/results/freq_response_3.png "Neuron frequencies")
+
+3. Binarized images
+
+![bin0](/results/thr_response_0.png "Neuron frequencies binarized")
+![bin1](/results/thr_response_1.png "Neuron frequencies binarized")
+![bin2](/results/thr_response_2.png "Neuron frequencies binarized")
+![bin3](/results/thr_response_3.png "Neuron frequencies binarized")
+
+4. The similarity metric for each image and average similarity
+
+
 
 ### Parameters
 
-File model_parameters.m consist of multiple blocks of parameters described in paper:
+File model_parameters.m consist of multiple blocks of parameters described in the paper:
 - Timeline
 - Experiment
 - Applied pattern current
