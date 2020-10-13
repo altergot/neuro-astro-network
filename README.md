@@ -24,11 +24,14 @@ git clone https://github.com/altergot/neuro-astro-network.git
 
 To simulate experiment open and run main.m
 Default experiment consist of 4 images at the learning stage (digits 0, 1, 2, 3):
-![zero](/images/zero.png "Zero")
-![one](/images/one.png "One")
-![two](/images/two.png "Two")
-![three](/images/three.png "Three")
+![zero](/images/zero.jpg "Zero")
+![one](/images/one.jpg "One")
+![two](/images/two.jpg "Two")
+![three](/images/three.jpg "Three")
 At the testing stage there are 8 alternated images (learned and new): digits 0, 5, 1, 6, 2, 7, 3, 8.
+
+Simulation model time is 7 seconds and step is 0.0001 seconds.
+Run time of model 
 
 ### Parameters
 
