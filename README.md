@@ -54,10 +54,22 @@ There are multiple results of the simulation:
 
 2. Neuron spike frequencies for recognized patterns
 
-    ![freq0](/results/freq_response_0.png "Neuron frequencies")
-    ![freq1](/results/freq_response_1.png "Neuron frequencies")
-    ![freq2](/results/freq_response_2.png "Neuron frequencies")
-    ![freq3](/results/freq_response_3.png "Neuron frequencies")
+    <table>
+        <tr>
+            <td>
+                <img src="/results/freq_response_0.png" alt="Neuron frequencies"/>
+            </td>
+            <td>
+                <img src="/results/freq_response_1.png" alt="Neuron frequencies"/>
+            </td>
+            <td>
+                <img src="/results/freq_response_2.png" alt="Neuron frequencies"/>
+            </td>
+            <td>
+                <img src="/results/freq_response_3.png" alt="Neuron frequencies"/>
+            </td>
+        </tr>
+    </table>
 
 3. Binarized neuron frequencies for recognized patterns
 
