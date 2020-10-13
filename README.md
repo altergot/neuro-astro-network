@@ -51,6 +51,7 @@ There are multiple results of the simulation:
 1. The movie of learning and testing processes
 
     ![response](/results/video_response_17026.png "Video frame 17026. Testing")
+
     Input signal, neuron spikes, astrocyte calcium concentration.
 
 2. Neuron spike frequencies for recognized patterns
