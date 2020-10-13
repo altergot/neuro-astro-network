@@ -64,16 +64,16 @@ There are multiple results of the simulation:
     <table>
         <tr>
             <td>
-                ![bin0](/results/thr_response_0.png "Neuron frequencies binarized")
+                <img src="/results/thr_response_0.png" alt="Neuron frequencies binarized"/>
             </td>
             <td>
-                ![bin1](/results/thr_response_1.png "Neuron frequencies binarized")
+                <img src="/results/thr_response_1.png" alt="Neuron frequencies binarized"/>
             </td>
             <td>
-                ![bin2](/results/thr_response_2.png "Neuron frequencies binarized")
+                <img src="/results/thr_response_2.png" alt="Neuron frequencies binarized"/>
             </td>
             <td>
-                ![bin3](/results/thr_response_3.png "Neuron frequencies binarized")
+                <img src="/results/thr_response_3.png" alt="Neuron frequencies binarized"/>
             </td>
         </tr>
         <tr>
