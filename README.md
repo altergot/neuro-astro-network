@@ -50,31 +50,45 @@ There are multiple results of the simulation:
 
 1. The movie of learning and testing processes
 
-![response](/results/video_response_17026.png "Video frame 17026. Testing")
+    ![response](/results/video_response_17026.png "Video frame 17026. Testing")
 
 2. Neuron spike frequencies for recognized patterns
 
-![freq0](/results/freq_response_0.png "Neuron frequencies")
-![freq1](/results/freq_response_1.png "Neuron frequencies")
-![freq2](/results/freq_response_2.png "Neuron frequencies")
-![freq3](/results/freq_response_3.png "Neuron frequencies")
+    ![freq0](/results/freq_response_0.png "Neuron frequencies")
+    ![freq1](/results/freq_response_1.png "Neuron frequencies")
+    ![freq2](/results/freq_response_2.png "Neuron frequencies")
+    ![freq3](/results/freq_response_3.png "Neuron frequencies")
 
 3. Binarized neuron frequencies for recognized patterns
 
-![bin0](/results/thr_response_0.png "Neuron frequencies binarized")
-*0.9157*
-![bin1](/results/thr_response_1.png "Neuron frequencies binarized")
-*0.9407*
-![bin2](/results/thr_response_2.png "Neuron frequencies binarized")
-*0.9092*
-![bin3](/results/thr_response_3.png "Neuron frequencies binarized")
-*0.8774*
+    <table>
+        <tr>
+            <td>
+                ![bin0](/results/thr_response_0.png "Neuron frequencies binarized")
+            </td>
+            <td>
+                ![bin1](/results/thr_response_1.png "Neuron frequencies binarized")
+            </td>
+            <td>
+                ![bin2](/results/thr_response_2.png "Neuron frequencies binarized")
+            </td>
+            <td>
+                ![bin3](/results/thr_response_3.png "Neuron frequencies binarized")
+            </td>
+        </tr>
+        <tr>
+            <td>0.9157</td>
+            <td>0.9407</td>
+            <td>0.9092</td>
+            <td>0.8774</td>
+        </tr>
+    </table>
 
 4. The similarity metric for each image and average similarity
 
-Similarity metrics for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774.
-
-Average = 0.9108
+    Similarity metrics for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774.
+    
+    Average = 0.9108
 
 ### Parameters
 
