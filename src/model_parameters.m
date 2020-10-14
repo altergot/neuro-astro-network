@@ -93,7 +93,7 @@ params.impact_astro = fix(impact_astro / params.step);
 params.window_astro_watch = fix(window_astro_watch / params.step);
 params.shift_window_astro_watch = fix(shift_window_astro_watch / params.step);
 
-%% Image similarity
+%% Memory performance
 params.max_spikes_thr = 30;
 
 %% 

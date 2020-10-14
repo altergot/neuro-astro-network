@@ -1,4 +1,4 @@
-function [similarity] = compute_similarity(images, V_line, T_Iapp)
+function [performance] = compute_memory_performance(images, V_line, T_Iapp)
     params = model_parameters();
     
     num_learn_patterns = length(params.learn_order);
@@ -29,16 +29,16 @@ function [similarity] = compute_similarity(images, V_line, T_Iapp)
         mean_similarities(i) = mean(pattern_similarity);
     end
     
-    similarity.spike_images = spike_images;
-    [similarity.mean_similarity, id_best_thr] = max(mean_similarities);
-    similarity.best_thr = spikes_thrs(id_best_thr);
-    similarity.spike_images_best_thr = spike_images > similarity.best_thr;
-    similarity.best_thr_freq = similarity.best_thr / (params.impact_astro * params.step);
-    similarity.freq_images = spike_images / (params.impact_astro * params.step);
+    performance.spike_images = spike_images;
+    [performance.mean_performance, id_best_thr] = max(mean_similarities);
+    performance.best_thr = spikes_thrs(id_best_thr);
+    performance.spike_images_best_thr = spike_images > performance.best_thr;
+    performance.best_thr_freq = performance.best_thr / (params.impact_astro * params.step);
+    performance.freq_images = spike_images / (params.impact_astro * params.step);
     
-    similarity.learned_pattern_similarities = ...
+    performance.learned_pattern_similarities = ...
         compute_images_similarity(images, ...
-            similarity.spike_images_best_thr, ...
+            performance.spike_images_best_thr, ...
             learned_patterns);
 end
 

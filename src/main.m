@@ -10,7 +10,7 @@ model = init_model();
 %% Simulation
 [model] = simulate_model(model, params);
 
-%% Visualization of learning and testing processes.
+%% Visualization of learning and testing processes
 %  Video consist of 3 frames (left to right): 
 %  1. input pattern
 %  2. neuron layer
@@ -22,14 +22,16 @@ model = init_model();
 
 show_video(model.video, struct('limits', [-0.8, 0.3], 'fps', 30));
 
-%% Compute accuracy of image recognition
-[similarity] = compute_similarity(model.images, model.V_line, model.T_Iapp);
+%% Compute memory performance
+[memory_performance] = ...
+    compute_memory_performance(model.images, model.V_line, model.T_Iapp);
 
-fprintf('Mean similarity: %0.4f\n', similarity.mean_similarity);
-fmt = repmat(' %0.4f',1,numel(similarity.learned_pattern_similarities));
-fprintf(['Similarity per image: ', fmt, '\n'], similarity.learned_pattern_similarities);
+fprintf('Mean memory performance: %0.4f\n', memory_performance.mean_performance);
+fmt = repmat(' %0.4f',1,numel(memory_performance.learned_pattern_similarities));
+fprintf(['Memory performance per image: ', fmt, '\n'], ...
+    memory_performance.learned_pattern_similarities);
 
 %% Predicted learned images 
-show_video(similarity.freq_images) % by frequency
-show_video(similarity.spike_images_best_thr) % with threshold
+show_video(memory_performance.freq_images) % by frequency
+show_video(memory_performance.spike_images_best_thr) % with threshold
 toc;

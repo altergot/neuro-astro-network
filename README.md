@@ -31,7 +31,7 @@ Default experiment consist of 4 images at the learning stage (digits 0, 1, 2, 3)
 ![two](/images/two.jpg "Two")
 ![three](/images/three.jpg "Three")
 
-And at the testing stage there are 8 alternated images are presented (learned and new): digits 0, 5, 1, 6, 2, 7, 3, 8.
+And at the testing stage there are 8 images are presented (learned and new) in the fixed order: digits 0, 5, 1, 6, 2, 7, 3, 8.
 
 ![zero](/images/zero.jpg "Zero")
 ![five](/images/five.jpg "Five")
@@ -98,11 +98,11 @@ There are multiple results of the simulation:
         </tr>
     </table>
 
-4. The similarity metric for each image and average similarity
+4. The memory performance metric for each image and its average value
 
-    Similarity metrics for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774
+    Memory performance metric for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774
     
-    Average similarity = 0.9108
+    Average memory performance = 0.9108
 
 ### Parameters
 
@@ -118,7 +118,7 @@ File model_parameters.m consist of multiple blocks of parameters described in th
 - Neuron mode
 - Synaptic connections
 - Astrosyte model
-- Image similarity
+- Memory performance
 
 ## Authors
 
