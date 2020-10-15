@@ -98,11 +98,11 @@ There are multiple results of the simulation:
         </tr>
     </table>
 
-4. The memory performance metric for each image and its average value
+4. The correlation of recalled pattern with ideal item for each image and its average value
 
-    Memory performance metric for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774
+    Correlation of recalled pattern for images (0,1,2,3): 0.9157, 0.9407, 0.9092, 0.8774
     
-    Average memory performance = 0.9108
+    Average correlation = 0.9108
 
 ### Parameters
 
