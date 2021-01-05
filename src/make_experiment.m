@@ -24,6 +24,7 @@ function [I_signals, full_timeline, timeline_signal_id, ...
             params.variance_test, params.Iapp_test);
     
     I_signals = cat(3, learn_signals, test_signals);
+    I_signals = uint8(I_signals);
 
     learn_timeline = make_timeline(params.learn_start_time, ...
         params.learn_impulse_duration, params.learn_impulse_shift, ...
@@ -33,6 +34,7 @@ function [I_signals, full_timeline, timeline_signal_id, ...
         length(test_order));
     full_timeline = [learn_timeline; test_timeline];
     full_timeline = fix(full_timeline ./ params.step);
+    full_timeline = uint16(full_timeline);
     
     timeline_signal_id = zeros(1, params.n, 'uint8');
     timeline_signal_id_movie = zeros(1, params.n, 'uint8');

@@ -7,7 +7,7 @@ end
 params = struct;
 
 %% Timeline
-params.t_end = 7;
+params.t_end = 6;
 params.step = 0.0001;
 params.n = fix(params.t_end / params.step);
 

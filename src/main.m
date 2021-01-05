@@ -1,6 +1,7 @@
-tic;
+try
+ tic;
 %% Initialization
-close all; clearvars;
+%close all; clearvars;
 
 rng(42);
 
@@ -20,7 +21,7 @@ model = init_model();
                            model.Iapp_v_full, ...
                            model.T_record_met);
 
-show_video(model.video, struct('limits', [-0.8, 0.3], 'fps', 30));
+show_video(model.video, struct('limits', [0, 255], 'fps', 30));
 
 %% Compute memory performance
 [memory_performance] = ...
@@ -35,3 +36,7 @@ fprintf(['Memory performance per image: ', fmt, '\n'], ...
 show_video(memory_performance.freq_images) % by frequency
 show_video(memory_performance.spike_images_best_thr) % with threshold
 toc;
+catch
+ warning('Out of memory. Type HELP MEMORY for your options');
+ fprintf('Please, increase the amount of available memory. The minimum required amount of RAM is 16 GB.');
+end

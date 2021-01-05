@@ -1,6 +1,8 @@
 function [Ca, h, IP3, Iastro_neuron, array_I_neuro] = step_astrocytes(neurons_activity, spike, ...
     array_I_neuro, i, Ca, h, IP3, Iastro_neuron)
     params = model_parameters();
+    diffusion_Ca = zeros(params.mastro, params.mastro,'double');
+    diffusion_IP3 = zeros(params.mastro, params.mastro,'double');
     for j = 1 : params.mastro
         for k = 1 : params.nastro
             if neurons_activity(j, k) >= params.min_neurons_activity
@@ -41,6 +43,7 @@ function [Ca, h, IP3, Iastro_neuron, array_I_neuro] = step_astrocytes(neurons_ac
             %% Astrocyte model
             X = [Ca(j, k) h(j, k) IP3(j, k)];
             I_neuro = array_I_neuro(j, k, i);
+            I_neuro = double(I_neuro);
             w1 = runge_astro(0, X,                      I_neuro, diffusion_Ca, diffusion_IP3);
             w2 = runge_astro(0, X + params.u2   .* w1', I_neuro, diffusion_Ca, diffusion_IP3);
             w3 = runge_astro(0, X + params.u2   .* w2', I_neuro, diffusion_Ca, diffusion_IP3);

@@ -10,6 +10,7 @@ function [I_poisson_noise] = make_poisson_noise()
     T_poisson = cumsum(T_poisson, 2);
     
     I_poisson_noise = zeros(params.quantity_neurons, max(T_poisson, [], 'all'));
+     I_poisson_noise = single( I_poisson_noise);
     for j = 1:params.quantity_neurons
         for i = 1:params.poisson_n_impulses
             be = T_poisson(j, i);
@@ -17,4 +18,6 @@ function [I_poisson_noise] = make_poisson_noise()
             I_poisson_noise(j, be:en) = amplitude(j, i);
         end
     end
+    I_poisson_noise = shiftdim(I_poisson_noise(:,1 : params.n + 1));
+    I_poisson_noise = single(I_poisson_noise);
 end
