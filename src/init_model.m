@@ -2,31 +2,32 @@ function [model] = init_model()
 model = struct;
 params = model_parameters();
 model.T = 0 : params.step : params.t_end;
+model.T = single(model.T);
 
 %% Zone
 model.Post = zeros(1, params.quantity_connections, 'int8');
 model.Pre  = zeros(1, params.quantity_connections, 'int8');
 
 %% Neurons
-model.V_line = zeros(params.quantity_neurons, params.n);
+model.V_line = zeros(params.quantity_neurons, params.n, 'double');
 model.V_line(:, 1) = params.v_0;
-model.G = zeros(params.quantity_neurons, params.n);
-model.U_line = zeros(params.quantity_neurons, params.n);
-model.Isyn_line = zeros(params.quantity_neurons, 1);
-model.Iastro_neuron_line = zeros(params.quantity_neurons, params.n);
-model.Mask_line = zeros(1, params.quantity_neurons);
+model.G = zeros(params.quantity_neurons, 1, 'double');
+model.U_line = zeros(params.quantity_neurons, 1, 'double');
+model.Isyn_line = zeros(params.quantity_neurons, 1,'double');
+model.Iastro_neuron_line = zeros(params.quantity_neurons, 1,'logical');
+model.Mask_line = zeros(1, params.quantity_neurons,'logical');
 
 %% Neuron activity
-model.neuron_astrozone_activity = zeros(params.mastro, params.nastro, params.n);
-model.neuron_astrozone_spikes   = zeros(params.mastro, params.nastro, params.n);
+model.neuron_astrozone_activity = zeros(params.mastro, params.nastro, 1,'int8');
+model.neuron_astrozone_spikes   = zeros(params.mastro, params.nastro, params.n,'int8');
 
 %% Astrocytes
-model.Ineuro = zeros(params.mastro, params.nastro, params.n);
+model.Ineuro = zeros(params.mastro, params.nastro, params.n,'int8');
 model.Iastro_neuron = zeros(params.mastro, params.nastro, params.n, 'logical');
-model.Ca = zeros(params.mastro, params.nastro, params.n);
-model.Ca_size_neuros = zeros(params.mneuro, params.nneuro, params.n);
-model.H = zeros(params.mastro, params.nastro, params.n);
-model.IP3 = zeros(params.mastro, params.nastro, params.n);
+model.Ca = zeros(params.mastro, params.nastro, 1,'double');
+model.Ca_size_neuros = zeros(params.mneuro, params.nneuro, params.n,'double');
+model.H = zeros(params.mastro, params.nastro, 1,'double');
+model.IP3 = zeros(params.mastro, params.nastro, 1,'double');
 model.Ca(:,:,1) = params.ca_0;
 model.H(:,:,1) = params.h_0;
 model.IP3(:,:,1) = params.ip3_0;
@@ -50,7 +51,7 @@ model.IP3(:,:,1) = params.ip3_0;
 %     model.T_Iapp_met = zeros(1, params.n, 'int8');
 %     model.T_record_met = zeros(1, params.n, 'int8');
 %     model.Iapp = zeros(params.mneuro, params.nneuro, size(model.T_Iapp,2));
-%     model.Iapp_v_full = zeros(params.mneuro, params.nneuro, params.n);
+     model.Iapp_v_full = zeros(params.mneuro, params.nneuro, params.n,'uint8');
 
 %% Prepare model
 [model.images] = load_images();

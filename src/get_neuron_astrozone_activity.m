@@ -3,9 +3,10 @@ function [neuron_astrozone_activity, neuron_astrozone_spikes] = ...
     params = model_parameters();
     
     mask1 = reshape(Mask_line, params.mneuro, params.nneuro);
+    mask1 = single(mask1);
     glutamate_above_thr = reshape(G >= 0.7, params.mneuro, params.nneuro);
-    neuron_astrozone_activity = zeros(params.mastro, params.nastro);
-    neuron_astrozone_spikes = zeros(params.mastro, params.nastro);
+    neuron_astrozone_activity = zeros(params.mastro, params.nastro, 'int8');
+    neuron_astrozone_spikes = zeros(params.mastro, params.nastro, 'int8');
     sj = 0;
     for j = 1 : params.az : (params.mneuro - params.az)
         sk = 0;

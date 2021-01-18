@@ -1,7 +1,7 @@
 function [Post_line,Pre] = create_connections()
     params = model_parameters();
-    Post = zeros(params.mneuro, params.nneuro, params.N_connections);
-    Post_for_one = zeros(params.mneuro, params.nneuro);
+    Post = zeros(params.mneuro, params.nneuro, params.N_connections, 'int16');
+    Post_for_one = zeros(params.mneuro, params.nneuro,'int8');
     ties_stock = 1000 * params.N_connections;
     for i = 1 : params.mneuro
         for j = 1 : params.nneuro
@@ -34,6 +34,7 @@ function [Post_line,Pre] = create_connections()
     end
     Post2 = permute(Post, [3 1 2]);
     Post_line = Post2(:)';
+    Pre = zeros(1,size(Post_line, 2), 'int16');
     k = 1;
     for i = 1 : params.N_connections : size(Post_line, 2)
         Pre(i : i + params.N_connections - 1) = k;

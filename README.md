@@ -12,6 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 - MATLAB R2018b
 - Statistics Toolbox
 - Image Processing Toolbox
+- The minimum required amount of RAM is 16 GB
 
 ### Installing
 
