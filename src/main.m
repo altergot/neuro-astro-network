@@ -39,10 +39,7 @@ try
     
 catch ME
     if (strcmp(ME.identifier,'MATLAB:nomem'))
-        n = 7;
-        if ~ischar(n)
-            error('Out of memory. Please, increase the amount of available memory. \nThe minimum required amount of RAM is 16 GB.', class(n));
-        end
+        error('Out of memory. Please, increase the amount of available memory. \nThe minimum required amount of RAM is 16 GB.', 0);
     else
         rethrow(ME);
     end
