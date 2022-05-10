@@ -131,9 +131,10 @@ File model_parameters.m consist of multiple blocks of parameters described in th
 
 ## Cite
 
-Formation of working memory in a spiking neuron network accompanied by astrocytes
+Modeling Working Memory in a Spiking Neuron Network Accompanied by Astrocytes
 Susanna Yu. Gordleeva, Yulia A. Tsybina, Mikhail I. Krivonosov, Mikhail V. Ivanchenko,
 Alexey A. Zaikin, Victor B. Kazantsev, Alexander N. Gorban
+https://doi.org/10.3389/fncel.2021.631485
 
 ## License
 
